@@ -27,5 +27,4 @@ RUN curl -s -f -L -o /tmp/installer.php https://raw.githubusercontent.com/compos
 RUN composer global require drupal/coder \
    && phpcs --config-set installed_paths /composer/vendor/drupal/coder/coder_sniffer
 WORKDIR /project
-ENTRYPOINT ["phpcs"]
-CMD ["--version"]
+CMD ["phpcs"]
